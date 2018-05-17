@@ -1,82 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt_Br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lista 2 Estrutura de seleção</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/func.js"></script>
-  <link href="css/cover.css" rel="stylesheet">
-  <title>Document</title>
+
+  <style>
+    .table {
+      box-shadow: 4px 4px 4px 4px #aaaaaa;
+    }
+
+  </style>
+  <script>
+      $(document).ready(function () {
+        $("#myBtn").click(function () {
+          $("#myModal").modal();
+        });
+      });
+    </script>
 </head>
 
 <body>
-
-  <body class="text-center">
-
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">Lista 2 - Eng. Software / Uni-Facef 2018</h3>
-          <h4 class="masthead-brand">Aluno: Victor Sued Cód. 21223</h4>
-          <h4 class="masthead-brand">Aluno: Leticia Silva Cód. 21223</h4>
-          </nav>
-        </div>
-      </header>
-      <div class="container">
-      <table class="table" id="myTable">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nota 1</th>
-            <th scope="col">Nota 2</th>
-            <th scope="col">Mensagem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>
-              <input type="number" id="n1" oninput=change()></input>
-            </td>
-            <td>
-              <input type="number" id="n2" oninput=change()></input>
-            </td>
-            <td id="n3"></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="container">
+    <div class="btn-group btn-group-justified" role="group">
+      <button type="button" class="btn btn-primary" id="myBtn">Exercício 1</button>
     </div>
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
+  </div>
+
+  <!-- Modal ex01 -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
+    id="myModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Exercicio 01</h4>
         </div>
-      </footer>
+        <div class="modal-body">
+          <div class="container">
+            <h6>1. Faça um programa que receba quatro notas de um aluno, calcule e mostre a média aritmética das notas e a mensagem
+              de aprovado ou reprovado, considerando para aprovação a média 7.</h6>
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nota 1</th>
+                  <th scope="col">Nota 2</th>
+                  <th scope="col">Nota 3</th>
+                  <th scope="col">Nota 4</th>
+                  <th scope="col">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <input type="number" class="form-control" id="ex01_n1" oninput="ex01()"/>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" id="ex01_n2" oninput="ex01()"/>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" id="ex01_n3" oninput="ex01()"/>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control" id="ex01_n4" oninput="ex01()"/>
+                  </td>
+                  <td id="ex01_result"></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+        </div>
+
+      </div>
+
     </div>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-  </body>
+  </div>
 
 </body>
 
